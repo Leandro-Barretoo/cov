@@ -24,7 +24,7 @@ const Homepage = () => {
   const myCovidData = covidList.map((covid) => (
     <div key={covid.code}>
       <div>
-        <Link to={{ pathname: '/details', state: covid }}>
+        <Link to={`/${covid.code}`}>
           {covid.name}
         </Link>
       </div>
