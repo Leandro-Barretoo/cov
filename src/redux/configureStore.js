@@ -8,7 +8,7 @@ const rootReducer = combineReducers({
 
 const store = createStore(
   rootReducer,
-  applyMiddleware(thunk),  
+  applyMiddleware(thunk),
 );
 
 window.store = store;
