@@ -1,4 +1,5 @@
 import {
+  BrowserRouter as Router,
   Routes,
   Route,
 } from 'react-router-dom';
@@ -7,13 +8,15 @@ import Details from './components/Details';
 import Nav from './components/Nav';
 
 const App = () => (
-  <>
-    <Nav />
-    <Routes>
-      <Route path="/" element={<Homepage />} />
-      <Route path="/*" element={<Details />} />
-    </Routes>
-  </>
+  <Router>
+    <>
+      <Nav />
+      <Routes>
+        <Route path="/" element={<Homepage />} />
+        <Route path="/*" element={<Details />} />
+      </Routes>
+    </>
+  </Router>
 );
 
 export default App;
