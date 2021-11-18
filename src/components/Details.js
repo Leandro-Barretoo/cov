@@ -1,4 +1,5 @@
 import { useSelector } from 'react-redux';
+import './Details.css';
 
 const Details = () => {
   const infoList = useSelector((state) => state.covidReducer);
@@ -27,55 +28,53 @@ const Details = () => {
     { renderInformation },
       <div>
         <div>
-          <span>Today stats:</span>
-          <span>
-            Confirmed:
-            {todayConfirmed}
-          </span>
-          <span>
-            Deaths:
-            {todayDeaths}
-          </span>
+          <span className="Stats-Title">Today stats:</span>
+          <div className="Stats-Entrie">
+            <span>Confirmed:</span>
+            <span>{todayConfirmed}</span>
+          </div>
+          <div className="Stats-Entrie">
+            <span>Deaths:</span>
+            <span>{todayDeaths}</span>
+          </div>
         </div>
         <div>
-          <span>
-            Latest data:
-          </span>
-          <span>
-            Confirmed:
-            {confirmed}
-          </span>
-          <span>
-            Recovered:
-            {recovered}
-          </span>
-          <span>
-            Critical:
-            {critical}
-          </span>
-          <span>
-            Deaths:
-            {deaths}
-          </span>
+          <span className="Stats-Title">Latest data:</span>
+          <div className="Stats-Entrie">
+            <span>Confirmed:</span>
+            <span>{confirmed}</span>
+          </div>
+          <div className="Stats-Entrie">
+            <span>Recovered:</span>
+            <span>{recovered}</span>
+          </div>
+          <div className="Stats-Entrie">
+            <span>Critical:</span>
+            <span>{critical}</span>
+          </div>
+          <div className="Stats-Entrie">
+            <span>Deaths:</span>
+            <span>{deaths}</span>
+          </div>
         </div>
         <div>
-          <span>Country statistics:</span>
-          <span>
-            Death rate:
-            {calculated.death_rate}
-          </span>
-          <span>
-            Recovery rate:
-            {calculated.recovery_rate}
-          </span>
-          <span>
-            Recover/Death ratio:
-            {calculated.recovered_vs_death_ratio}
-          </span>
-          <span>
-            Cases per million:
-            {calculated.cases_per_million_population}
-          </span>
+          <span className="Stats-Title">Country statistics:</span>
+          <div className="Stats-Entrie">
+            <span>Death rate:</span>
+            <span>{calculated.death_rate}</span>
+          </div>
+          <div className="Stats-Entrie">
+            <span>Recovery rate:</span>
+            <span>{calculated.recovery_rate}</span>
+          </div>
+          <div className="Stats-Entrie">
+            <span>Recover/Death ratio:</span>
+            <span>{calculated.recovered_vs_death_ratio}</span>
+          </div>
+          <div className="Stats-Entrie">
+            <span>Cases per million:</span>
+            <span>{calculated.cases_per_million_population}</span>
+          </div>
         </div>
       </div>
   );
