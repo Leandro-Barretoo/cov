@@ -8,7 +8,7 @@ const Nav = () => (
       <span className="Logo"><Link to="/" className="Link">CoronaWide</Link></span>
     </div>
     <div className="Slogan-Cont">
-      <img className="Logo" src={logo} alt="covid logo" />
+      <img className="Logo-Img" src={logo} alt="covid logo" />
       <span className="Slogan">
         World&apos;s CoronaVirus Statistics
       </span>
