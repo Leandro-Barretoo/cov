@@ -1,7 +1,7 @@
-import React from "react";
-import { Provider } from "react-redux";
-import { shallow } from "enzyme";
-import Homepage from "../components/Homepage";
+import React from 'react';
+import { Provider } from 'react-redux';
+import { shallow } from 'enzyme';
+import Homepage from '../components/Homepage';
 import store from '../redux/configureStore';
 
 describe('Components: Homepage', () => {
@@ -10,15 +10,15 @@ describe('Components: Homepage', () => {
       shallow(
         <Provider store={store}>
           <Homepage />
-        </Provider>
-      ).length
+        </Provider>,
+      ).length,
     ).toEqual(1);
     expect(
       shallow(
         <Provider store={store}>
           <Homepage />
-        </Provider>
-      ).length
+        </Provider>,
+      ).length,
     ).toMatchSnapshot();
   });
 });
